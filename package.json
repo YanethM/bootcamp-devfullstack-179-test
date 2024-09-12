@@ -1,0 +1,36 @@
+{
+  "name": "project_test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --env=node",
+    "test:ci": "NODE_ENV=test jest --env=node",
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "bdd": "cucumber-js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.6.0"
+  },
+  "devDependencies": {
+    "@cucumber/cucumber": "^11.0.0",
+    "chai": "^5.1.1",
+    "cucumber": "^6.0.7",
+    "jest": "^29.7.0",
+    "nodemon": "^3.1.4",
+    "supertest": "^7.0.0"
+  },
+  "jest": {
+    "setupFilesAfterEnv": [
+      "<rootDir>/__test__/jest.setup.js"
+    ]
+  }
+}
